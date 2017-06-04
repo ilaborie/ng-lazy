@@ -1,0 +1,19 @@
+{
+  "name": "plop",
+  "version": "1.0.0",
+  "main": "js/lazy.js",
+  "license": "Apache-2.0",
+  "scripts": {
+    "clean": "rimraf js/",
+    "build": "npm run -s clean && tsc",
+    "build:dev": "tsc",
+    "start": "node $npm_package_main",
+    "start:dev": "tsc -w & onchange $npm_package_main -- npm run -s start"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.27",
+    "onchange": "^3.2.1",
+    "rimraf": "^2.6.1",
+    "typescript": "^2.3.4"
+  }
+}
