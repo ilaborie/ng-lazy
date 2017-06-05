@@ -1,0 +1,41 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+* {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+[class*=module] {
+  color: black;
+  text-shadow: 1px 1px 0 hsla(0,100%,100%);
+  border: medium solid rgba(0, 0, 0, .42);
+}
+
+.moduleA {
+  background: lightgoldenrodyellow;
+}
+
+.moduleB {
+  background: lightblue;
+}
+
+.moduleC {
+  background: lightgreen;
+}
+
+.moduleD {
+  background: lightpink;
+}
+
+.container p {
+  min-width: 50vmin;
+  min-height: 50vmin;
+  font-size: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

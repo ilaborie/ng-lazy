@@ -1,0 +1,32 @@
+.moduleC {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 80vmin;
+}
+
+.moduleC > div {
+  text-align: center;
+}
+
+svg {
+  flex: 1 1 auto;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+.anim {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  animation: stroke 4s infinite linear;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
