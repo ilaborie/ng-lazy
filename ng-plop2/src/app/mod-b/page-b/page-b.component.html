@@ -1,0 +1,8 @@
+<div class="moduleB">
+  <div *ngIf="user$ | async; else notAuthenticated; let user">
+    <h2>Hello {{ user.name }},<br> you are into module B</h2>
+  </div>
+  <ng-template #notAuthenticated>
+    Nobody is authenticated !
+  </ng-template>
+</div>

@@ -1,10 +1,44 @@
 <div class="moduleC">
-  <div>
-    <input type="text" [(ngModel)]="title">
-    <button type="button" (click)="apply()">Apply</button>
-  </div>
+  <h2>Module using <a href="https://d3js.org/">D3.js</a></h2>
+
+  <form name="titleForm">
+    <input type="text" name="title" [(ngModel)]="title">
+    <button type="submit" (click)="apply()">Apply</button>
+  </form>
 
   <svg viewBox="0 0 100 50">
-      <text class="anim" text-anchor="middle" x="50%" y="50%" dy=".35em"></text>
+    <defs>
+      <linearGradient id="unicornGradient" x1="0" y1="10%" x2="90%" y2="0%">
+        <!--20% spreadMethod="repeat"-->
+        <stop offset="0%" stop-color="crimson"/>
+        <stop offset="10%" stop-color="purple"/>
+        <stop offset="10%" stop-color="red"/>
+        <stop offset="20%" stop-color="crimson"/>
+        <stop offset="20%" stop-color="orangered"/>
+        <stop offset="30%" stop-color="red"/>
+        <stop offset="30%" stop-color="orange"/>
+        <stop offset="40%" stop-color="orangered"/>
+        <stop offset="40%" stop-color="gold"/>
+        <stop offset="50%" stop-color="orange"/>
+        <stop offset="50%" stop-color="yellowgreen"/>
+        <stop offset="60%" stop-color="gold"/>
+        <stop offset="60%" stop-color="green"/>
+        <stop offset="70%" stop-color="yellowgreen"/>
+        <stop offset="70%" stop-color="steelblue"/>
+        <stop offset="80%" stop-color="skyblue"/>
+        <stop offset="80%" stop-color="mediumpurple"/>
+        <stop offset="90%" stop-color="steelblue"/>
+        <stop offset="90%" stop-color="purple"/>
+        <stop offset="100%" stop-color="mediumpurple"/>
+      </linearGradient>
+
+      <pattern id="unicorn"
+               patternUnits="userSpaceOnUse"
+               width="100" height="100"
+               viewbox="0 0 100 100">
+        <rect width="100" height="100" fill="url(#unicornGradient)"/>
+      </pattern>
+    </defs>
+    <text class="anim" stroke="url(#unicorn)" text-anchor="middle" x="50%" y="50%" dy=".35em"></text>
   </svg>
 </div>
