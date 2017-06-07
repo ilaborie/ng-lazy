@@ -30,12 +30,13 @@ body {
   background: lightpink;
 }
 
-.container p {
+.container [class*=module]  {
   min-width: 50vmin;
   min-height: 50vmin;
   font-size: 2rem;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "doc": "compodoc src -p src/tsconfig.app.json -n \"NG PLOP\" --hideGenerator"
   },
   "private": true,
   "dependencies": {
@@ -25,16 +26,20 @@
     "core-js": "^2.4.1",
     "d3": "^4.9.1",
     "hammerjs": "^2.0.8",
+    "prettysize": "^0.1.0",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "1.1.0",
+    "@angular/cli": "~1.1.0",
     "@angular/compiler-cli": "^4.0.0",
     "@angular/language-service": "^4.0.0",
+    "@compodoc/compodoc": "^1.0.0-beta.9",
+    "@types/chalk": "^0.4.31",
     "@types/d3": "^4.9.0",
     "@types/jasmine": "2.5.45",
     "@types/node": "~6.0.60",
+    "chalk": "^1.1.3",
     "codelyzer": "~3.0.1",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
@@ -47,6 +52,7 @@
     "protractor": "~5.1.2",
     "ts-node": "~3.0.4",
     "tslint": "~5.3.2",
+    "tty-table": "^2.5.2",
     "typescript": "~2.3.3"
   }
 }
