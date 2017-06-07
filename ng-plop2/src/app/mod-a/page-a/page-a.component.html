@@ -1,0 +1,9 @@
+<div class="moduleA">
+  <div *ngIf="user$ | async; else needLogin; let user">
+    <h2>Hello {{ user.name }}</h2>
+    <button type="button" (click)="logout()">Logout</button>
+  </div>
+  <ng-template #needLogin>
+    <button type="button" (click)="login()">Login</button>
+  </ng-template>
+</div>

@@ -11,22 +11,21 @@
 
 svg {
   flex: 1 1 auto;
-  font-family: "Open Sans", sans-serif;
 }
-
 
 .anim {
   fill: none;
-  stroke: #000;
+  font-family: fantasy, cursive, sans-serif;
   stroke-width: 1;
   stroke-linejoin: round;
-  stroke-dasharray: 70 330;
-  stroke-dashoffset: 0;
-  animation: stroke 4s infinite linear;
+  stroke-dasharray: 70 150;
+  stroke-dashoffset: 150;
+  animation: stroke 5s infinite linear;
+  font-size: 1rem;
 }
 
 @keyframes stroke {
   100% {
-    stroke-dashoffset: -400;
+    stroke-dashoffset: 0;
   }
 }

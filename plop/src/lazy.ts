@@ -48,7 +48,7 @@ class lazy<T> {
     constructor(private supplier: Supplier<T>) { }
 
     get() {
-        if(this.value === undefined) {
+        if (this.value === undefined) {
             this.value = this.supplier();
             this.supplier = null;
         }
@@ -56,9 +56,14 @@ class lazy<T> {
     }
 }
 
-var obj = {
-    lazyValue : new lazy(longComputationFunction)
+class AnObject {
+    lazyValue: lazy<number>;
+    constructor(supplier: Supplier<number>) {
+        this.lazyValue = new lazy(supplier);
+    }
 };
+
+const obj = new AnObject(longComputationFunction);
 
 console.log('call 1');
 console.log(obj.lazyValue.get());
@@ -66,3 +71,28 @@ console.log(obj.lazyValue.get());
 console.log('call 2');
 console.log(obj.lazyValue.get());
 
+console.log('-----------------------------------');
+console.log('|        lazy attribute 2         |');
+console.log('-----------------------------------');
+
+class AnotherObject {
+    private _lazyValue: number;
+    get value(): number {
+        if (this._lazyValue === undefined) {
+            this._lazyValue = this.supplier();
+            this.supplier = null;
+        }
+        return this._lazyValue;
+    }
+
+    constructor(private supplier: Supplier<number>) {
+    }
+};
+
+const obj2 = new AnotherObject(longComputationFunction);
+
+console.log('call 1');
+console.log(obj2.value);
+
+console.log('call 2');
+console.log(obj2.value);

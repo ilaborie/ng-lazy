@@ -16,7 +16,6 @@ export class PageCComponent implements OnInit {
   }
 
   apply() {
-    // <text class="anim" text-anchor="middle" x="50%" y="50%" dy=".35em"></text>
     d3.select('.anim')
       .text(() => this.title);
   }

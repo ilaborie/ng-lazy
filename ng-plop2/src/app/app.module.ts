@@ -1,10 +1,11 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import 'hammerjs';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ModAModule} from './mod-a/mod-a.module';
+import {ModBModule} from './mod-b/mod-b.module';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -12,8 +13,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule
+    SharedModule,
+    ModAModule,
+    ModBModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
