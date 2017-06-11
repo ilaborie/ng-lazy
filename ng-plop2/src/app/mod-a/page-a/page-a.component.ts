@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthenticationService} from '../../shared/authentication.service';
+import {AuthenticationService} from '../../core/authentication.service';
 import {Observable} from 'rxjs/Observable';
-import {User} from '../../shared/user.model';
+import {User} from '../../core/user.model';
 
 @Component({
   selector: 'app-page-a',

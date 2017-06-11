@@ -3,12 +3,12 @@ import {CommonModule} from '@angular/common';
 
 import {ModARoutingModule} from './mod-a-routing.module';
 import {PageAComponent} from './page-a/page-a.component';
-import {SharedModule} from '../shared/shared.module';
+import {CoreModule} from '../core/core.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    SharedModule,
+    CoreModule,
     ModARoutingModule
   ],
   declarations: [PageAComponent]

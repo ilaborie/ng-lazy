@@ -3,12 +3,12 @@ import {CommonModule} from '@angular/common';
 
 import {ModBRoutingModule} from './mod-b-routing.module';
 import {PageBComponent} from './page-b/page-b.component';
-import {SharedModule} from 'app/shared/shared.module';
+import {CoreModule} from 'app/core/core.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    SharedModule,
+    CoreModule,
     ModBRoutingModule
   ],
   declarations: [PageBComponent]
