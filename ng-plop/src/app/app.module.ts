@@ -5,6 +5,7 @@ import 'hammerjs';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CustomPreloader} from './custom.preloader';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CustomPreloader],
   bootstrap: [AppComponent]
 })
 export class AppModule {
