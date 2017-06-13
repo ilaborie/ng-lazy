@@ -8,7 +8,7 @@ import {CoreModule} from 'app/core/core.module';
 @NgModule({
   imports: [
     CommonModule,
-    CoreModule,
+    // CoreModule,
     ModBRoutingModule
   ],
   declarations: [PageBComponent]
