@@ -1,7 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthenticationService} from '../../shared/authentication.service';
+import {Store} from '@ngrx/store';
 import {Observable} from 'rxjs/Observable';
-import {User} from '../../shared/user.model';
+import {User} from '../../user.model';
+import {getUser, State} from '../../app.reducer';
+import {LoginAction, LogoutAction} from '../mod-a.actions';
 
 @Component({
   selector: 'app-page-a',
@@ -11,19 +13,19 @@ import {User} from '../../shared/user.model';
 export class PageAComponent implements OnInit {
   user$: Observable<User>;
 
-  constructor(private authenticationService: AuthenticationService) {
-    this.user$ = authenticationService.user$;
+  constructor(private store: Store<State>) {
+    this.user$ = store.select(getUser);
   }
 
   ngOnInit() {
   }
 
   login() {
-    this.authenticationService.login();
+    this.store.dispatch(new LoginAction({name: 'Toto'}));
   }
 
   logout() {
-    this.authenticationService.logout();
+    this.store.dispatch(new LogoutAction());
   }
 
 }
