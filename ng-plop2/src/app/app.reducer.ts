@@ -5,16 +5,14 @@ import {compose} from '@ngrx/core/compose';
 import {createSelector} from 'reselect';
 import {environment} from '../environments/environment';
 import {AuthenticationState} from './user.model';
-import {authenticationReducer} from './mod-a/mod-a.reducer';
 
 export interface State {
-  authentication: AuthenticationState;
+  authentication?: AuthenticationState;
   router: RouterState;
 }
 
 export function buildReducers(addOn: { [index: string]: ActionReducer<any> } = {}) {
   const reducers = Object.assign({
-    authentication: authenticationReducer,
     router: routerReducer
   }, addOn);
 

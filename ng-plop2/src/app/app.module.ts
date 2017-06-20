@@ -6,8 +6,6 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {ModAModule} from './mod-a/mod-a.module';
-import {ModBModule} from './mod-b/mod-b.module';
 import {reducer} from './app.reducer';
 
 @NgModule({
@@ -16,8 +14,6 @@ import {reducer} from './app.reducer';
   ],
   imports: [
     BrowserModule,
-    ModAModule,
-    ModBModule,
     AppRoutingModule,
     StoreModule.provideStore(reducer),
     RouterStoreModule.connectRouter(),

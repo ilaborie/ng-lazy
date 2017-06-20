@@ -5,6 +5,9 @@ import {EffectsModule} from '@ngrx/effects';
 import {ModARoutingModule} from './mod-a-routing.module';
 import {AuthenticationEffects} from './mod-a.effects';
 import {PageAComponent} from './page-a/page-a.component';
+import {Store} from '@ngrx/store';
+import {buildReducers, State} from '../app.reducer';
+import {authenticationReducer} from './mod-a.reducer';
 
 @NgModule({
   imports: [
@@ -16,6 +19,8 @@ import {PageAComponent} from './page-a/page-a.component';
 })
 export class ModAModule {
 
-  constructor() {
+  constructor(store: Store<State>) {
+    const reducer = buildReducers({authentication: authenticationReducer});
+    store.replaceReducer(reducer);
   }
 }
